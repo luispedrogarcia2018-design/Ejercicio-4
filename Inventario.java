@@ -7,7 +7,7 @@ public class Inventario {
 
     private static int opcion;
 
-    private static void main(String [] args){
+    public static void main(String [] args){
         System.out.println("Bienvenido al menú Dulce Estación!");
         do{
             System.out.println("Ingrese una de las siguientes opciones:");
@@ -32,13 +32,30 @@ public class Inventario {
                     while (true){
                     try{
                         if (opcion == 1){
-                            Maquinas.add(new MaquinaPalomitas(opcion, null, null, opcion, opcion, false));
+                            int codigo = scanner.nextInt();
+                            String marca = scanner.nextLine();
+                            String modelo = scanner.nextLine();
+                            double tarifaDiaria = scanner.nextDouble();
+                            int porcionesPorHora = scanner.nextInt();
+                            boolean tieneCarrito = scanner.nextBoolean();
+                            Maquinas.add(new MaquinaPalomitas( codigo, marca, modelo, tarifaDiaria, porcionesPorHora, tieneCarrito));
+
                         }
                         else if (opcion == 2){
-                            Maquinas.add(new MaquinaAlgodon(opcion, null, null, opcion, opcion));
+                            int codigo = scanner.nextInt();
+                            String marca = scanner.nextLine();
+                            String modelo = scanner.nextLine();
+                            double tarifaDiaria = scanner.nextDouble();
+                            int potencia = scanner.nextInt();
+                            Maquinas.add(new MaquinaAlgodon(codigo, marca, modelo, tarifaDiaria, potencia));
                         }
                         else if (opcion == 3){
-                            Maquinas.add(new FuenteChocolate(opcion, null, null, opcion, opcion));
+                            int codigo = scanner.nextInt();
+                            String marca = scanner.nextLine();
+                            String modelo = scanner.nextLine();
+                            double tarifaDiaria = scanner.nextDouble();
+                            int capacidad = scanner.nextInt();
+                            Maquinas.add(new FuenteChocolate(codigo, marca, modelo, tarifaDiaria, capacidad));
                         }
                         else{
                             throw new IllegalArgumentException("Esa opción no está disponible");

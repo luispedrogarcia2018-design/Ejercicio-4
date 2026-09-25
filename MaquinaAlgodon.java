@@ -1,6 +1,6 @@
 public class MaquinaAlgodon extends Maquina{
     
-private int potencia;
+private int potencia;// son atributos, hay que cambiarlo en el UML
 
 public MaquinaAlgodon(int codigo, String marca, String modelo, double tarifaDiaria, int potencia) {
     super(codigo, marca, modelo, tarifaDiaria); //esto hace que se ejecuten los datos de la clase padre para que esta clase los pueda usar
