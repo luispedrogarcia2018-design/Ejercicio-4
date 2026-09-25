@@ -40,6 +40,10 @@ public class MaquinaPalomitas extends Maquina {
     
     return total;
 }
+@Override
+public String getCategoria() {
+    return "Palomitas";
+}
 }
 
 

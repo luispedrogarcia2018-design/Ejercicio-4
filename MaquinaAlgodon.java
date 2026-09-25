@@ -25,4 +25,8 @@ public double calcularCobros(int dias) {
     
     return total;
 }
+@Override
+public String getCategoria() {
+    return "Algodon";
+}
 }
