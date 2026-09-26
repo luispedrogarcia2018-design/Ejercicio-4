@@ -312,11 +312,17 @@ Maquinas.add(new FuenteChocolate(302, "nike", "fountain", 90.00, 1.5));
     }
     System.out.println("__________________\n");
     break;
-    } 
 
-    
-} while (opcion != 6); // aqui ya termina full el foking menu de caca
 
-} 
-} 
+    case 6:
+    System.out.println("saliendo del sistema, Nos vemos jijijiji");
+    System.exit(0); // Esto mata el programa de un solo golpe, ignorando cualquier while.
+
+
+                default:
+                    System.out.println("Opción inválida. Intente de nuevo.");
+            }
+        } while (opcion != 6);
+    }
+}
         
