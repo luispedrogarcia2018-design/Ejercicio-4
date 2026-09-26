@@ -1,4 +1,4 @@
-public class Maquina {
+public abstract class Maquina {
 
     private int codigo;
     private String marca;
@@ -19,7 +19,6 @@ public Maquina (int codigo, String marca, String modelo, double tarifaDiaria) {
     this.marca = marca;
     this.modelo = modelo;
     this.tarifaDiaria = tarifaDiaria;
-
     this.disponible = true;
 }
 
@@ -72,7 +71,7 @@ public boolean isDisponible() {
 public void setDisponible(boolean disponible) {
     this.disponible = disponible;
 }
-
+    public abstract String getCategoria();  
 }
 
 

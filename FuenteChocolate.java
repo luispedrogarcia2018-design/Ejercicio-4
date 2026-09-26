@@ -19,8 +19,12 @@ public void setCapacidadKg(double capacidadKg) {
 public double calcularCobros(int dias) {
     double total = super.calcularCobros(dias);  
 //esto multiplica los kg que le caben a la maquina por los dias que alguien la alquila y eso da el recargo que hay que hacerle
-    double recargo = this.capacidadKg * dias;
+    double recargo = this.capacidadKg * dias*20;
 
     return total + recargo;
+}
+@Override
+public String getCategoria() {
+    return "Chocolate";
 }
 }
